@@ -32,13 +32,15 @@ In this paper the specific research question that I will be focusing on is: how 
 \label{sec:data}
 In order to study the proposed research question on the topic of diabetes, I searched through many databases in order to find a set that had all of the information I was looking for. After exploration, I found a data set entitled "Healthcare Diabetes Data set" on the website Kaggle. The data set was originally sourced from the National Institute of Diabetes and Digestive and Kidney Diseases. The data encompasses eight different predictors including pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes pedigree function, and age.
 
-The predictors listed above will be represented in my research as the following variables. 'Pregnancies' will provide the number of times an entry has been pregnant. 'Glucose' will provide the plasma glucose concentration over two hours using the results of an oral glucose tolerance test on a entry. 'BloodPressure' gives the diastolic blood pressure in mm Hg of an entry. 'SkinThickness' will provide the triceps skin fold thickness in mm. 'Insulin' will include a test on two hour serum insulin in mu U/ml. 'BMI' will provide a calculation of weight (kg) divided by height ($m^2$). 'DiabetesPedigreeFunction' will provide a genetic score of diabetes. 'Age' will simply be the entry's age at the time of the collection. 
+The predictors listed above will be represented in my research as the following variables. 'Pregnancies' will provide the number of times an entry has been pregnant. 'Glucose' will provide the plasma glucose concentration over two hours using the results of an oral glucose tolerance test on a entry. 'BloodPressure' gives the diastolic blood pressure in mm Hg of an entry. 'SkinThickness' will provide the triceps skin fold thickness in mm. 'Insulin' will include a test on two hour serum insulin in mu U/ml. 'BMI' will provide a calculation of weight (kg) divided by height ($m^2$). 'DiabetesPedigreeFunction' will provide a genetic score of diabetes. 'Age' will simply be the entry's age at the time of the collection. Following this paragraph, I will provide the link to the dataset that I will be using as well as showing some descriptive statistics in Table~\ref{tab:ds} including the mean, standard deviation, and median.  
 
 Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabetes}{Healthcare Diabetes}
 
 \begin{table}[ht]
-    \centering
-    \begin{tabular}{lrrr}
+    \caption{Descriptive Statistics of Healthcare Diabetes Dataset}
+  \label{tab:ds}
+\centering
+\begin{tabular}{lrrr}
       \hline
     Variable & Mean & SD & Median \\ 
       \hline
@@ -56,7 +58,7 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     \end{tabular}
     \caption{Descriptive Statistics} 
     \end{table}
-    
+
 \section{Methods}
 \label{sec:meth}
 
