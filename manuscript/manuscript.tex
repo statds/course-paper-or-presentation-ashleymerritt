@@ -64,8 +64,29 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
 
 \section{Methods}
 \label{sec:meth}
-    Various methods will be used to complete the statistical analysis necessary for this project. I will begin by exploring basic descriptive statistics to gain an understanding of my data set. I will then progress to creating visualizations including histograms and box plots to understand relationships and patterns within my data. In order to draw insight on my data I will perform logistic regression analysis to determine which predictors are significant in predicting if someone has diabetes. Within this analysis I will perform necessary transformations in order to create the best model that I can. From my results I will draw necessary conclusions about my data.
+    Various methods will be used to complete the statistical analysis necessary for this project. I will begin by exploring basic descriptive statistics to gain an understanding of my data set. I will then progress to creating visualizations including histograms and box plots to understand relationships and patterns within my data. In order to draw insight on my data I will perform logistic regression analysis to determine which predictors are significant in predicting if someone has diabetes. In order to perform the logistic regression, I will have to check the necessary assumptions associated with the method. Within this analysis I will perform necessary transformations in order to create the best model that I can. From my results I will draw necessary conclusions about my data.
     
+    The first assumption that will be checked in that the dependent variable is binary, this true as our outcome variable is in the form of 1 (having diabetes) or 2 (not having diabetes). The next assumption that will be checked is if the observations are independent of each other, this is also true for our data as each predictor is calculated or taken independent of one another. The third assumption that will be checked is that there is no multicollinearity among the independent variables. In order to check this assumption we will calculate the variance inflation factor, VIF, in order to measure the strength of the correlation between predictor variables in our model. One example of this is seen in Table~\ref{tab:vif} where all of the values are around 1, indicating that there is moderate correlation between pregnancies and the other predictors but this value is not in a concerning range. 
+
+\begin{table}[ht]
+\caption{VIF Values} 
+\label{tab:vif}
+\centering
+\begin{tabular}{rr}
+  \hline
+ & vif(lm(P \~{} G + BP + ST + I + BMI + DPF + A)) \\ 
+  \hline
+Glucose & 1.29 \\ 
+  BloodPressure & 1.18 \\ 
+  SkinThickness & 1.50 \\ 
+  Insulin & 1.44 \\ 
+  BMI & 1.30 \\ 
+  DiabetesPedigreeFunction & 1.06 \\ 
+  Age & 1.18 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
     After exploring the descriptive statistics, I will begin to perform a logistic regression. Logistic regression, is used to describe the data and the relationship between one dependent variable against many independent variables. In this particular case, we will be looking at the binary response of diabetes with the various independent variables including but not limited to; pregnancies and glucose levels. To begin, I will split the data into a training and a test set. This will be done by setting a random seed of 30 and using 80 percent of the data set in the training set and the remaining 20 percent as the testing set. We will next begin to build the logistic regression model using the training data. 
     
     In Table~\ref{tab:sl} you will see the output of each predictor on predicting the outcome of diabetes. This table will provide us with coefficients, the standard errors, the z-scores, and finally the p-value for each predictor in the model. Based on the output, we can determine that only skin thickness is not statistically significant in predicting if a patient may have diabetes. Therefore, all of the other predictors are statistically significant and should be monitored in predicting diabetes.
