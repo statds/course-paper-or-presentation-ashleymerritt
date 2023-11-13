@@ -59,7 +59,33 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
 \section{Methods}
 \label{sec:meth}
     Various methods will be used to complete the statistical analysis necessary for this project. I will begin by exploring basic descriptive statistics to gain an understanding of my data set. I will then progress to creating visualizations including histograms and box plots to understand relationships and patterns within my data. In order to draw insight on my data I will perform logistic regression analysis to determine which predictors are significant in predicting if someone has diabetes. Within this analysis I will perform necessary transformations in order to create the best model that I can. From my results I will draw necessary conclusions about my data.
+    
+    After exploring the descriptive statistics, I will begin to perform a logistic regression. Logistic regression, is used to describe the data and the relationship between one dependent variable against many independent variables. In this particular case, we will be looking at the binary response of diabetes with the various independent variables including but not limited to; pregnancies and glucose levels. To begin, I will split the data into a training and a test set. This will be done by setting a random seed of 30 and using 80 percent of the data set in the training set and the remaining 20 percent as the testing set. We will next begin to build the logistic regression model using the training data. 
+    
+    In Table~\ref{tab:sl} you will see the output of each predictor on predicting the outcome of diabetes. This table will provide us with coefficients, the standard errors, the z-scores, and finally the p-value for each predictor in the model. Based on the output, we can determine that only skin thickness is not statistically significant in predicting if a patient may have diabetes. Therefore, all of the other predictors are statistically significant and should be monitored in predicting diabetes.
 
+
+
+\begin{table}[ht]
+    \caption{Summary of Logistic Regression Model}
+    \label{tab:sl}
+\centering
+\begin{tabular}{lrrrr}
+  \hline
+Predictor & Estimate & Std. Error & z value & Pr($>$$|$z$|$) \\ 
+  \hline
+(Intercept) & -8.02 & 0.41 & -19.73 & 0.00 \\ 
+  Pregnancies & 0.11 & 0.02 & 6.04 & 0.00 \\ 
+  Glucose & 0.03 & 0.00 & 16.34 & 0.00 \\ 
+  BloodPressure & -0.01 & 0.00 & -3.69 & 0.00 \\ 
+  SkinThickness & 0.00 & 0.00 & 0.26 & 0.79 \\ 
+  Insulin & -0.00 & 0.00 & -2.74 & 0.01 \\ 
+  BMI & 0.08 & 0.01 & 9.07 & 0.00 \\ 
+  DiabetesPedigreeFunction & 0.76 & 0.17 & 4.38 & 0.00 \\ 
+  Age & 0.02 & 0.01 & 3.03 & 0.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
 \section{Results}
 \label{sec:resu}
 
