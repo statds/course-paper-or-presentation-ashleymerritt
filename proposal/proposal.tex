@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage[colorlinks=true, citecolor=blue]{hyperref}
+
+
+\title{Proposal: Predicting Diabetes Based on Various Factors}
+\author{Ashley Merritt\\
+  Department of Statistics\\
+  University of Connecticut
+  }
+
+\begin{document}
+\maketitle
+
+\paragraph{Introduction}
+According to the American Diabetes Association, about 11.3 percent of Americans, or about 37.3 million people, have diabetes. Of those 37.3 million people, about 28.7 million were actually diagnosed with diabetes, while the remaining 8.6 million were left undiagnosed (\citet{CDC2022Diabetes}). Those left undiagnosed are at risk for even more serious illness if left untreated. Diabetes is a disease where your body does not create enough insulin, or use it properly, in order to get glucose into your cells and use it for energy (\cite{NIH2023Whatis}). Therefore, it is very important that your body has a normal glucose level. In this paper, I will be working to determine the pre-existing factors that can be used in order to predict if a person may have diabetes. Establishing the predictors is very important to me as many of my family members have a long history of suffering from this disease. It is important to better predict this disease to save people from unnecessary suffering. 
+
+Previously, the prediction of diabetes has been studied using machine learning models. Specifically in Sisodia's paper, it focused on the "Prediction of Diabetes using Classification Algorithms", they worked through the topic by producing results using support vector machine, Naive Bayes classifier, and decision tree classifier (\cite{Sisodia2018Prediction}). In this paper, I will be continuing the investigation with a different data set using logistic regression and various other statistical tests.. 
+
+
+\paragraph{Specific Aims}
+In this paper the specific research question that I will be focusing on is: how can we use machine learning models in order to identify individuals that may have already or are at risk at developing diabetes? This will be researched using a data set that contains various metrics on one's health that will be described in the next section of the paper.
+
+
+\paragraph{Data}
+
+In order to study the proposed research question on the topic of diabetes, I searched through many databases in order to find a set that had all of the information I was looking for. After exploration, I found a data set entitled "Healthcare Diabetes Data set" on the website Kaggle. The data set was originally sourced from the National Institute of Diabetes and Digestive and Kidney Diseases. The data encompasses eight different predictors including pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes pedigree function, and age.
+
+The predictors listed above will be represented in my research as the following variables. 'Pregnancies' will provide the number of times an entry has been pregnant. 'Glucose' will provide the plasma glucose concentration over two hours using the results of an oral glucose tolerance test on a entry. 'BloodPressure' gives the diastolic blood pressure in mm Hg of an entry. 'SkinThickness' will provide the triceps skin fold thickness in mm. 'Insulin' will include a test on two hour serum insulin in mu U/ml. 'BMI' will provide a calculation of weight (kg) divided by height ($m^2$). 'DiabetesPedigreeFunction' will provide a genetic score of diabetes. 'Age' will simply be the entry's age at the time of the collection. 
+
+Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabetes}{Healthcare Diabetes}
+
+
+\paragraph{Research Design and Methods}
+Various methods will be used to complete the statistical analysis necessary for this project. I will begin by exploring basic descriptive statistics to gain an understanding of my data set. I will then progress to creating visualizations including histograms and box plots to understand relationships and patterns within my data. In order to draw insight on my data, I will perform a logistic regression analysis to determine which predictors are significant in predicting if a patient may have diabetes. Within this analysis I will perform necessary transformations in order to create the best model that I can. From my results I will draw necessary conclusions about my data.
+
+
+\paragraph{Discussion}
+
+As with any data set, we are always challenged with the fact that the data chosen may not show all possibilities of the entire population as it is only a sample and therefore only a scope. Therefore, we can only come to conclusions based on the data that we have chosen to use. Another challenging part of this task is determining which predictors we are going to use. This will require careful experimentation as well as healthcare knowledge.
+
+As this is a paper dealing with sensitive medical data, we have many limitations in order to be ethical as well as respecting patient privacy. Based on the data set collected we should be able to ensure patient privacy pretty well as names or any very unique identifiers are not listed with each entry. We simply have a ID and age for each entry so we do not have to worry as much for the sake of privacy. In terms of our direct models we may have to disregard some assumptions as they may not fit with real world data. If something unexpected happens we may have to reconsider the data set used and consider finding a new one. This will be done by a case by case scenario and will be investigated thoroughly before making any decisions. 
+
+\bibliography{proposal/refs}
+\bibliographystyle{apalike}
+
+\end{document}
