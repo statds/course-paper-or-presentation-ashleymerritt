@@ -118,6 +118,13 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     logistic regression, I will have to check the necessary assumptions associated with the method. Within this analysis I will perform 
     necessary transformations in order to create the best model that I can. From my results I will draw necessary conclusions about my data.
     
+    After exploring the descriptive statistics, I will begin to perform a logistic regression. Logistic regression, is used to describe the 
+    data and the relationship between one dependent variable against many independent variables. In this particular case, we will be looking 
+    at the binary response of diabetes with the various independent variables including but not limited to; pregnancies and glucose levels. 
+    To begin, I will split the data into a training and a test set. This will be done by setting a random seed of 30 and using 80 percent 
+    of the data set in the training set and the remaining 20 percent as the testing set. We will next begin to build the logistic 
+    regression model using the training data.
+    
     The first assumption that will be checked in that the dependent variable is binary, this true as our outcome variable is in the form of 
     1 (having diabetes) or 2 (not having diabetes). The next assumption that will be checked is if the observations are independent of each 
     other, this is also true for our data as each predictor is calculated or taken independent of one another. The third assumption that 
@@ -144,13 +151,7 @@ Glucose & 1.29 \\
    \hline
 \end{tabular}
 \end{table}
-
-    After exploring the descriptive statistics, I will begin to perform a logistic regression. Logistic regression, is used to describe the 
-    data and the relationship between one dependent variable against many independent variables. In this particular case, we will be looking 
-    at the binary response of diabetes with the various independent variables including but not limited to; pregnancies and glucose levels. 
-    To begin, I will split the data into a training and a test set. This will be done by setting a random seed of 30 and using 80 percent 
-    of the data set in the training set and the remaining 20 percent as the testing set. We will next begin to build the logistic 
-    regression model using the training data. 
+ 
     
     In Table~\ref{tab:sl} you will see the output of each predictor on predicting the outcome of diabetes. This table will provide us with 
     coefficients, the standard errors, the z-scores, and finally the p-value for each predictor in the model. Based on the output, we can 
