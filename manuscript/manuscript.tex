@@ -55,7 +55,29 @@ This section will be completed once the paper is closer to completion.
     that had all of the information I was looking for. After exploration, I found a data set entitled "Healthcare Diabetes Data set" on 
     the website Kaggle. The data set was originally sourced from the National Institute of Diabetes and Digestive and Kidney Diseases. The 
     data encompasses eight different predictors including pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes 
-    pedigree function, and age.
+    pedigree function, and age. In Table~\ref{tab:head_of_data} I will provide the first couple lines of dataset in order to provide
+    more information on the dataset.
+
+    \begin{table}[ht]
+    \caption{Head of the Dataset}
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{rrrrrrrrr}
+      \hline
+    Pregnancies & Glucose & BloodPressure & SkinThickness & Insulin & BMI & DiabetesPedigreeFunction & Age & Outcome \\ 
+      \hline
+      6 & 148 &  72 &  35 &   0 & 33.60 & 0.63 &  50 &   1 \\ 
+        1 &  85 &  66 &  29 &   0 & 26.60 & 0.35 &  31 &   0 \\ 
+        8 & 183 &  64 &   0 &   0 & 23.30 & 0.67 &  32 &   1 \\ 
+        1 &  89 &  66 &  23 &  94 & 28.10 & 0.17 &  21 &   0 \\ 
+        0 & 137 &  40 &  35 & 168 & 43.10 & 2.29 &  33 &   1 \\ 
+        5 & 116 &  74 &   0 &   0 & 25.60 & 0.20 &  30 &   0 \\ 
+       \hline
+    \end{tabular}%
+    } 
+    \label{tab:head_of_data}
+    \end{table}
+    
 
     The predictors listed above will be represented in my research as the following variables. 'Pregnancies' will provide the number of 
     times an entry has been pregnant. 'Glucose' will provide the plasma glucose concentration over two hours using the results of an oral 
