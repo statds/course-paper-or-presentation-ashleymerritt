@@ -111,8 +111,19 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
 
 \section{Methods}
 \label{sec:meth}
-    Various methods will be used to complete the statistical analysis necessary for this project. I will begin by exploring basic 
-    descriptive statistics to gain an understanding of my data set. I will then begin to create my model for my decision tree by
+    Various methods will be used to complete the statistical analysis necessary for this paper. I will begin by exploring basic 
+    descriptive statistics to gain an understanding of my data set. We will move on to model testing, where we will perform both 
+    decision tree analysis and random forest in order to determine what predictors prove to be necessary in predicting if a patient
+    will have the outcome 1 of having diabetes. Decision trees were choosen to represent the data as they are generally pretty easy
+    to understand.
+
+    To begin, I will provide an explanation of what a decision tree is and why it is useful in this case. A decision tree is considered
+    to be example of supervised learning used for regression and classification. Through our analysis we will present trees, these trees
+    begin at the top with a decision root node, which is the point where you make a decision. Following down there are subsequent sub trees
+    that have other decision nodes. Finally at the bottom of each tree you reach a leaf node, where it is the output of the decision and 
+    there are no further branches off of this.  
+    
+    I will then begin to create my model for my decision tree by
     splitting the data into a test and training set. The training set will encompass 80 percent of the data whereas the test set will
     only have 20 percent. After creating these two sets we will now be ready to build the model, this will be done by using the rpart
     function in R, where method will be 'class' as this is a binary model. We will then see in Figure~\ref{fig:structure} the structure
