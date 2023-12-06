@@ -140,19 +140,7 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     older than 29 years old, then 8 percent of the time the patient had diabetes. The rest of the structure is similar but with different 
     values and predictors.
 
-\begin{table}[ht]
-  \centering
-  \caption{Decision Tree Model Performance} 
-    \begin{tabular}{rrr}
-    \toprule
-    .metric & .estimator & .estimate\\ 
-    \midrule
-  rmse & standard & 4.5341301\\
-  rsq & standard & 0.0115986\\
-    \bottomrule
-  \end{tabular}
-  \label{tab:mp}
-  \end{table}
+
 
 \begin{figure}[tbp]
   \centering
@@ -160,6 +148,22 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
   \includegraphics[width=\textwidth]{Decision Tree Structure.pdf}
   \label{fig:structure}
   \end{figure}
+
+\begin{table}[ht]
+    \centering
+    \caption{Decision Tree Results}
+    \label{tab:dtr} 
+    \begin{tabular}{rrr}
+      \toprule
+      Metric & Value\\
+      \midrule
+      Accuracy & 0.82\\
+      Precision & 0.72\\
+      Recall & 0.74\\
+      F1 Score & 0.73\\
+      \bottomrule
+      \end{tabular}
+    \end{table}
 
 \begin{table}[ht]
   \centering
@@ -175,17 +179,12 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
   \label{tab:conf_matrix}
   \end{table}
 
-\begin{figure}[tbp]
-  \centering
-  \caption{Pruned Decision Tree Structure}
-  \includegraphics[width=\textwidth]{Pruned_tree.pdf}
-  \label{fig:prstructure}
-  \end{figure}
+
 
 \section{Results}
 \label{sec:resu}
 
-Looking at Table ~\ref{tab:mp} we can see that our RMSE value is 4.534 
+
 
 After completing our methods section, we can now move on to talk about the results of our model. Based on our logistic regression model, 
 we now know that all of the predictors in the data set except skin thickness are important in order to predict whether a patient may have 
