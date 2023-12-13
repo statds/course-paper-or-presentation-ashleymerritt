@@ -130,11 +130,10 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
 
 \section{Methods}
 \label{sec:meth}
-    Various methods will be used to complete the statistical analysis necessary for this paper. I will begin by exploring basic 
-    descriptive statistics to gain an understanding of my data set. We will move on to model testing, where we will perform both 
-    decision tree analysis and random forest in order to determine what predictors prove to be necessary in predicting if a patient
-    will have the outcome 1 of having diabetes. Decision trees were choosen to represent the data as they are generally pretty easy
-    to understand.
+    Various methods will be used to complete the analysis necessary for this paper. I have begun by exploring basic descriptive statistics in
+    the previous section in order to gain an understanding of my data set. Next, we will move on to model testing, where we will perform both 
+    decision tree analysis in order to determine what predictors prove to be necessary in predicting if a patient
+    will have the outcome 1 of having diabetes. 
 
     To begin, I will provide an explanation of what a decision tree is and why it is useful in this case. A decision tree is considered
     to be example of supervised learning used for regression and classification. Through our analysis we will present trees, these trees
@@ -142,15 +141,15 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     that have other decision nodes. Finally at the bottom of each tree you reach a leaf node, where it is the output of the decision and 
     there are no further branches off of this.  
     
-    I will then begin to create my model for my decision tree by
-    splitting the data into a test and training set. The training set will encompass 80 percent of the data whereas the test set will
-    only have 20 percent. After creating these two sets we will now be ready to build the model, this will be done by using the rpart
-    function in R, where method will be 'class' as this is a binary model. We will then see in Figure~\ref{fig:structure} the structure
-    of the decision tree created. Looking at the leftmost path in the decision tree we can see that at the top the outcome was 0 meaning 
-    that the patient did not have diabetes 35 percent of the time. Moving down to the next node, we can see that 68 percent of patients with
-    glucose level less than 128, did not have diabetes 19 percent of the time. To finish this path, 61 percent of the time if the patient was
-    older than 29 years old, then 8 percent of the time the patient had diabetes. The rest of the structure is similar but with different 
-    values and predictors.
+    I will then begin to create my model for my decision tree by splitting the data into a test and training set. The training set will
+    encompass 80 percent of the data whereas the test set will only have 20 percent. This method of splitting will help to prevent any biases that may 
+    be attributed from imbalances in the distribution of critical features. After creating these two sets we will now be ready
+    to build the model, this will be done by using the rpart function in R, where method will be 'class' as this is a binary model. We will
+    then see in Figure~\ref{fig:structure} the structure of the decision tree created. Looking at the leftmost path in the decision tree we 
+    can see that at the top the outcome was 0 meaning that the patient did not have diabetes 35 percent of the time. Moving down to the next node, 
+    we can see that 68 percent of patients with glucose level less than 128, did not have diabetes 19 percent of the time. To finish this path,
+    61 percent of the time if the patient was older than 29 years old, then 8 percent of the time the patient had diabetes. The rest of the structure
+    is similar but with different values and predictors.
 
 
 
@@ -183,6 +182,13 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
       \includegraphics[width=\textwidth]{Confusion Matrix Heatmap}
       \label{fig:Heatmap}
       \end{figure}
+  
+  \begin{figure}[tbp]
+    \centering
+    \caption{Variance Importance Plot}
+    \includegraphics[width=\textwidth]{Variance Importance}
+    \label{fig:importance}
+  \end{figure}
 
 
 
