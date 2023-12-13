@@ -112,7 +112,15 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
        \hline
     \end{tabular}
     \end{table}
-  
+  Another valuable piece of information for understanding our patients is seeing the range of the dataset. In Figure~\ref{fig:histogram}, we
+  are able to see the spread of each predictor in our dataset. We can see that the majority of our patients are in the 20 to 30 year old range. 
+  The bloodpressure predictor provides us with a somewhat normal distribution with the average being around 70 beats per minute. The BMI
+  distribution is somewhat normal as well, with a slight right skew. Whereas the diabetes pedigree function is very skewed to the right. Glucose
+  levels appear to be normal. Insulin levels appear to be very skewed to the right with the majority of values being 0. The outcome distribution
+  is exactly as expected with only values of 0 or 1, from here on values of 0 will denote no detection of diabetes and 1 will detect diabetes. The
+  number of pregnancies predictor also supplied a right skew but we know this to be valid as most people are not having 4 or more children. The 
+  final predictor graphed was the skin thickness, this predictor displayed a right skew.
+
   \begin{figure}[tbp]
     \centering
     \caption{Each variable represented as a histogram}
