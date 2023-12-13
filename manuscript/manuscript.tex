@@ -197,11 +197,15 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
 
 
 
-After completing our methods section, we can now move on to talk about the results of our model. Based on our logistic regression model, 
-we now know that all of the predictors in the data set except skin thickness are important in order to predict whether a patient may have 
-diabetes or not. With this information medical professionals will be able to ensure proper treatment to patients as they can use these 
-predictors in order to tell if a patient may have diabetes even sooner than typical means. The model allows for medical professionals to 
-use the model in order to further their research into diabetes and the various precursors.
+After completing our methods section, we can now move on to talk about the results of our model. Based on Figure~ref{fig:importance}, we can 
+see that the top three predictors are glucose, BMI, and age. The result of glucose being of the greatest importance makes complete sense with 
+medical knowledge of diabetes as a patient that has high amounts of glucose in their bloodstream could have type 2 diabetes. This is known due
+to glucose not being absorbed by insulin as these patients do not use insulin properly. We can see that almost all of the outcomes are explained
+by glucose. The next predictor that is successful in predicting a large amount of the data is the patients BMI. This alligns on a medical standpoint
+as patients who have larger BMI values are more susceptable to getting type 2 diabetes as they are considered to be obese. Based on our results, BMI
+was able to predict about half of the outcomes. The last predictor that proved to be valuable in predicting if someone has diabetes is age. This result
+is somewhat medically backed but not entirely a result that we expected. Often times people that are older have diabetes due to numerous factors but it is 
+not as common for younger folks.
 
 \section{Discussion}
 \label{sec:disc}
