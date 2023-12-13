@@ -28,7 +28,6 @@ literature on diabetes prediction. These findings allow for early intervention m
 risk assessment.
 \end{abstract}
 
-
 \section{Introduction}
 \label{sec:intro}
     According to the American Diabetes Association, about 11.3 percent of Americans, or about 37.3 million people, have diabetes.
@@ -88,7 +87,6 @@ risk assessment.
     \label{tab:head_of_data}
     \end{table}
     
-
     The predictors listed above will be represented in my research as the following variables. 'Pregnancies' will provide the number of 
     times an entry has been pregnant. 'Glucose' will provide the plasma glucose concentration over two hours using the results of an oral 
     glucose tolerance test on a entry. 'BloodPressure' gives the diastolic blood pressure in mm Hg of an entry. 'SkinThickness' will 
@@ -118,6 +116,7 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
        \hline
     \end{tabular}
     \end{table}
+
   Another valuable piece of information for understanding our patients is seeing the range of the dataset. In Figure~\ref{fig:histogram}, we
   are able to see the spread of each predictor in our dataset. We can see that the majority of our patients are in the 20 to 30 year old range. 
   The bloodpressure predictor provides us with a somewhat normal distribution with the average being around 70 beats per minute. The BMI
@@ -157,8 +156,6 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     61 percent of the time if the patient was older than 29 years old, then 8 percent of the time the patient had diabetes. The rest of the structure
     is similar but with different values and predictors.
 
-
-
 \begin{figure}[tbp]
   \centering
   \caption{Decision Tree Structure}
@@ -196,12 +193,8 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     \label{fig:importance}
   \end{figure}
 
-
-
 \section{Results}
 \label{sec:resu}
-
-
 
 After completing our methods section, we can now move on to talk about the results of our model. Based on Figure~ref{fig:importance}, we can 
 see that the top three predictors are glucose, BMI, and age. The result of glucose being of the greatest importance makes complete sense with 
