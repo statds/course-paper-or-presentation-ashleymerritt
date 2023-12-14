@@ -9,6 +9,6 @@ ggplot(as.data.frame.table(conf_matrix), aes(x = Actual, y = Predicted, fill = F
   geom_tile() +
   scale_fill_gradient(low = "white", high = "blue") +
   geom_text(aes(label = Freq), vjust = 1) +
-  labs(title = "Confusion Matrix Heatmap", x = "Actual Outcome", y = "Predicted Outcome")
+  labs(x = "Actual Outcome", y = "Predicted Outcome")
 
 
