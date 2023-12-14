@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{setspace}
-\doublespacing
+\singlespacing
 
 \usepackage{amsmath}
 \usepackage[margin = 1in]{geometry}
@@ -36,19 +36,22 @@ risk assessment.
     Diabetes is a disease where your body does not create enough insulin, or use it properly, in order to get glucose into your cells 
     and use it for energy (\cite{NIH2023Whatis}).
     
-    There are two types of diabetes that the majority of the patients have, type 1 or 2. The bodies of people that have type 1 diabetes
-    completely do not make insulin, so they must take a daily insulin shot. Whereas in type 2 diabetes, these patients produce insulin but 
-    their bodies do not use it properly (\cite{JDC2023Difference}). Therefore, it is very important that your body has a normal glucose level.
-    In this paper, I will be working to determine the pre-existing factors that can be used in order to predict if a person may have diabetes. 
-    Establishing the predictors is very important to me as many of my family members have a long history of suffering from this disease. 
-    It is important to better predict this disease to save people from unnecessary suffering. 
+    There are two types of diabetes that the majority of patients have, type 1 or 2. The bodies of people that have type 1 diabetes
+    completely do not make insulin, so they must take a daily insulin shot. Whereas individuals who have type 2 diabetes, produce insulin but 
+    their bodies do not use it properly so they are treated either by exercise, taking on a diet or in some cases use of various medicines and/or insulin (\cite{JDC2023Difference}). 
+    Therefore, it is very important that your body has a normal glucose level. In this paper, I will be working to determine the pre-existing
+    factors that can be used in order to predict if a person may have diabetes. Establishing the predictors is very important to me as many of
+    my family members have a long history of suffering from this disease. Therefore, this information could directly allow myself and my family members be
+    proactive in terms of prevention and care. It is important to better predict this disease to save people from unnecessary suffering. 
 
-    Previously, the prediction of diabetes has been studied using machine learning models. Specifically in Sisodia's paper, it focused
+    Previously, the prediction of diabetes has been studied using other machine learning models. Specifically in Sisodia's paper, it focused
     on the "Prediction of Diabetes using Classification Algorithms", they worked through the topic by producing results using support 
-    vector machine, Naive Bayes classifier, and decision tree classifier (\cite{Sisodia2018Prediction}). In this paper, I will be 
-    continuing the investigation with a different data set using decision trees.
+    vector machine and Naive Bayes classifier. In Sisodia's paper they were able to get to an accuracy level of 76.3 percent, which we hope to exceed using
+    a different machine learning model (\cite{Sisodia2018Prediction}). In this paper, I will be 
+    continuing the investigation with a different data set using decision trees to better understand the predictors that help to determine if a patient
+    may have diabetes.
 
-    In this paper the specific research question that I will be focusing on is: how can we use machine learning models in order to identify 
+    In this paper the specific research question that I will be focusing on is: how can we use machine learning models, specifically decision trees, in order to identify 
     individuals that may have already or are at risk at developing diabetes? This will be researched using a data set that contains various 
     metrics on one's health that will be described in the next section of the paper.
 
@@ -61,11 +64,11 @@ risk assessment.
 \section{Data}
 \label{sec:data}
     In order to study the proposed research question on the topic of diabetes, I searched through many databases in order to find a set 
-    that had all of the information I was looking for. After exploration, I found a data set entitled "Healthcare Diabetes Data set" on 
+    that had all of the information I was looking for. After exploration, I was able to find a data set entitled "Healthcare Diabetes Data set" on 
     the website Kaggle. The data set was originally sourced from the National Institute of Diabetes and Digestive and Kidney Diseases. The 
     data encompasses eight different predictors including pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes 
     pedigree function, and age. In Table~\ref{tab:head_of_data} I will provide the first couple lines of dataset in order to provide
-    more information on the dataset.
+    more information. 
 
     \begin{table}[ht]
     \caption{Head of the Dataset}
@@ -118,8 +121,8 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     \end{table}
 
   Another valuable piece of information for understanding our patients is seeing the range of the dataset. In Figure~\ref{fig:histogram}, we
-  are able to see the spread of each predictor in our dataset. We can see that the majority of our patients are in the 20 to 30 year old range. 
-  The bloodpressure predictor provides us with a somewhat normal distribution with the average being around 70 beats per minute. The BMI
+  are able to see the spread of each predictor in our dataset. We can see that the majority of our patients are in the 20 to 30 year old range and that the distribution is skewed to the right. 
+  The bloodpressure predictor provides us with a slightly normal distribution with the average being around 70 beats per minute. The BMI
   distribution is somewhat normal as well, with a slight right skew. Whereas the diabetes pedigree function is very skewed to the right. Glucose
   levels appear to be normal. Insulin levels appear to be very skewed to the right with the majority of values being 0. The outcome distribution
   is exactly as expected with only values of 0 or 1, from here on values of 0 will denote no detection of diabetes and 1 will detect diabetes. The
