@@ -156,11 +156,11 @@ Dataset link: \href{https://www.kaggle.com/datasets/nanditapore/healthcare-diabe
     encompass 80 percent of the data whereas the test set will only have 20 percent. This method of splitting will help to prevent any biases that may 
     be attributed from imbalances in the distribution of critical features. After creating these two sets I will now be ready
     to build the model. This will be done by using the rpart function in R, where the method will be 'class' as this is a binary model. We will
-    then see in Figure~\ref{fig:structure} the structure of the decision tree created. Looking at the leftmost path in the decision tree we 
-    can see that at the top the outcome was 0 meaning that the patient did not have diabetes 35 percent of the time. Moving down to the next node, 
-    we can see that 68 percent of patients with glucose level less than 128, did not have diabetes 19 percent of the time. To finish this path,
-    61 percent of the time if the patient was older than 29 years old, then 8 percent of the time the patient had diabetes. The rest of the structure
-    is similar but with different values and predictors.
+    then see in Figure~\ref{fig:structure} the structure of the decision tree created. Starting at the root node at the top of the graph, it shows the overall probability
+    of having diabetes in this dataset. 35 percent of the patients were classified as having diabetes (or the outcome of 0). The node then asks if the the
+    glucose level of the patient is less than 128. If yes, then it moves down to the left child node. 63 percent have glucose level less than 128 with a diabetes
+    outcome of 0 probability of 19 percent. The child node then asks if the patients age is less than 29 years old. If yes, the chance of not having diabetes is eight percent.
+    The rest of the tree is described similiarly but with different values of probability, predictors, and outcomes. 
 
 \begin{figure}[tbp]
   \centering
